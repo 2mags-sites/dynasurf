@@ -21,9 +21,19 @@ function isAdminMode() {
     return IS_ADMIN;
 }
 
-// Admin authentication keys from environment
-define('ADMIN_SECRET_KEY', EnvLoader::get('ADMIN_SECRET_KEY', 'dynasurf_admin_2024_xK9mP3nQ'));
-define('CACHE_CLEAR_KEY', EnvLoader::get('CACHE_CLEAR_KEY', 'clear_dynasurf_cache_7R2sL5vW'));
+// Admin authentication keys from environment (NO defaults for security)
+$adminKey = EnvLoader::get('ADMIN_SECRET_KEY');
+$cacheKey = EnvLoader::get('CACHE_CLEAR_KEY');
+
+if (empty($adminKey) || empty($cacheKey)) {
+    error_log('SECURITY WARNING: Admin keys not set in .env file');
+    // Use secure random keys that change every request if .env is missing
+    $adminKey = $adminKey ?: bin2hex(random_bytes(16));
+    $cacheKey = $cacheKey ?: bin2hex(random_bytes(16));
+}
+
+define('ADMIN_SECRET_KEY', $adminKey);
+define('CACHE_CLEAR_KEY', $cacheKey);
 
 // Check for admin mode activation/deactivation
 if (isset($_GET['admin']) && $_GET['admin'] === ADMIN_SECRET_KEY) {
