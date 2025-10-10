@@ -62,9 +62,10 @@ jobs:
         host: ${{ secrets.WHM_HOST }}
         username: ${{ secrets.WHM_USERNAME }}
         key: ${{ secrets.WHM_SSH_KEY }}
-        source: "*.php,*.html,.htaccess,.github,assets,content,includes"
+        source: "."
         target: "/home/twomagseo/dynasurf.2magpiesseo.co.uk"
-        rm: false  # Never remove existing files
+        rm: false
+        strip_components: 0
 
     - name: 🔒 Set correct permissions
       uses: appleboy/ssh-action@v0.1.5
