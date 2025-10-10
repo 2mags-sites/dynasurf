@@ -30,7 +30,11 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
 
-    # Block access to includes, content, and cache directories
+    # Allow JavaScript files from includes directory (needed for admin mode)
+    RewriteCond %{REQUEST_URI} ^/includes/.*\.js$ [NC]
+    RewriteRule ^ - [L]
+
+    # Block access to includes, content, and cache directories (except JS files)
     RewriteRule ^(includes|content|cache)/ - [F,L]
 
     # Block access to admin files for non-authenticated users
