@@ -52,6 +52,7 @@ body {
     color: var(--aluminum);
     background: var(--carbon-black);
     position: relative;
+    overflow-x: hidden;
 }
 
 /* Technical Background Pattern */
@@ -153,6 +154,7 @@ header {
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
 }
 
 /* Laser scan animation at bottom of header */
