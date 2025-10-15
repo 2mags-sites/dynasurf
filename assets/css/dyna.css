@@ -332,7 +332,7 @@ header::after {
     right: 0;
     bottom: 0;
     background:
-        url('../images/gears_bg.jpg'),
+        url('../images/pipes_bg.jpg'),
         repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(201, 209, 217, 0.01) 39px, rgba(201, 209, 217, 0.01) 40px),
         repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(201, 209, 217, 0.01) 39px, rgba(201, 209, 217, 0.01) 40px);
     background-size: cover, 40px 40px, 40px 40px;
