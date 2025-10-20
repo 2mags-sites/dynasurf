@@ -51,13 +51,15 @@ include __DIR__ . '/includes/header.php';
                     $service = $services[$i] ?? [];
                 ?>
                 <div class="service-card">
+                    <?php if (isset($service['icon']) && !empty($service['icon'])): ?>
                     <div class="service-icon">
-                        <?php if (isset($service['icon']) && strpos($service['icon'], 'assets/') === 0): ?>
+                        <?php if (strpos($service['icon'], 'assets/') === 0): ?>
                             <img src="<?php echo htmlspecialchars($service['icon']); ?>" alt="<?php echo htmlspecialchars($service['title'] ?? ''); ?>" />
                         <?php else: ?>
-                            <?php echo editable($service['icon'] ?? '⚙️', "services.items[$i].icon"); ?>
+                            <?php echo editable($service['icon'], "services.items[$i].icon"); ?>
                         <?php endif; ?>
                     </div>
+                    <?php endif; ?>
                     <h3><?php echo editable($service['title'] ?? 'Service Title', "services.items[$i].title"); ?></h3>
                     <p><?php echo editable($service['description'] ?? 'Service description', "services.items[$i].description"); ?></p>
                     <a href="<?php echo $service['link'] ?? '#'; ?>" class="btn-link">Learn More →</a>

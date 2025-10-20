@@ -1,5 +1,126 @@
 {
     "hero": {
-        "subtitle": "Hydraulic Repairs \u2022 Cylinder Honing \u2022 Hose Manufacturing"
+        "subtitle": "Hydraulic Repairs • Cylinder Honing • Hose Manufacturing"
+    },
+    "about": {
+        "title": "Precision Engineering Since 1970",
+        "content": [
+            "With over 50 years of expertise, Dynasurf UK Ltd has established itself as a leading provider of precision surface engineering and hydraulic solutions. Based in Liverpool, we serve clients across the UK with specialized services in hydraulic repairs, cylinder honing, and hose manufacturing.",
+            "Our state-of-the-art facility is equipped with advanced machinery and operated by skilled engineers who bring decades of combined experience. We pride ourselves on delivering exceptional quality, fast turnaround times, and reliable service that keeps your operations running smoothly."
+        ],
+        "button_text": "Learn About Us"
+    },
+    "why_choose": {
+        "title": "Why Choose Dynasurf?",
+        "subtitle": "Industry-leading capabilities with a customer-first approach",
+        "features": [
+            {
+                "icon": "🎯",
+                "title": "50+ Years Experience",
+                "description": "Decades of specialized expertise in precision surface engineering and hydraulic systems"
+            },
+            {
+                "icon": "⚡",
+                "title": "Fast Turnaround",
+                "description": "Express services available for urgent repairs and emergency breakdowns"
+            },
+            {
+                "icon": "✓",
+                "title": "Quality Guaranteed",
+                "description": "Rigorous testing and inspection ensure every component meets exacting standards"
+            },
+            {
+                "icon": "🔧",
+                "title": "Advanced Equipment",
+                "description": "State-of-the-art machinery for precision honing, grinding, and manufacturing"
+            },
+            {
+                "icon": "👥",
+                "title": "Expert Engineers",
+                "description": "Skilled team with comprehensive knowledge of hydraulic and mechanical systems"
+            },
+            {
+                "icon": "💼",
+                "title": "Industry Specialists",
+                "description": "Serving manufacturing, construction, automotive, agriculture, and more"
+            }
+        ]
+    },
+    "services": {
+        "heading": "Our Core Services",
+        "subheading": "Over 50 years of expertise in precision surface engineering",
+        "items": [
+            {
+                "title": "Hydraulic Ram Repair",
+                "description": "Expert repair and refurbishment of hydraulic rams and cylinders with precision machining and surface restoration.",
+                "link": "/hydraulic-ram-repair.php"
+            },
+            {
+                "title": "Cylinder Tube Honing",
+                "description": "Precision honing services for cylinder tubes to exact tolerances, ensuring optimal performance and longevity.",
+                "link": "/cylinder-tube-honing.php"
+            },
+            {
+                "title": "Hydraulic Hose Manufacturing",
+                "description": "Custom hydraulic hose manufacturing and assembly to meet your specific requirements and industry standards.",
+                "link": "/hydraulic-hose-manufacturing.php"
+            }
+        ]
+    },
+    "process": {
+        "heading": "Our Process",
+        "subheading": "Precision engineering from consultation to delivery",
+        "steps": [
+            {
+                "number": "1",
+                "title": "Consultation",
+                "description": "We assess your requirements and provide expert recommendations for the best solution."
+            },
+            {
+                "number": "2",
+                "title": "Precision Work",
+                "description": "Our skilled engineers perform repairs and manufacturing to exacting standards using advanced equipment."
+            },
+            {
+                "number": "3",
+                "title": "Quality Control",
+                "description": "Every component undergoes rigorous testing and inspection before delivery to ensure optimal performance."
+            },
+            {
+                "number": "4",
+                "title": "Delivery",
+                "description": "Fast turnaround times with reliable delivery to keep your operations running smoothly."
+            }
+        ]
+    },
+    "industries": {
+        "title": "Industries We Serve",
+        "subtitle": "Supporting critical equipment across diverse sectors",
+        "items": [
+            {
+                "icon": "🏗️",
+                "name": "Construction & Earthmoving"
+            },
+            {
+                "icon": "🚜",
+                "name": "Agricultural Machinery"
+            },
+            {
+                "icon": "🏭",
+                "name": "Manufacturing & Automation"
+            },
+            {
+                "icon": "🚗",
+                "name": "Automotive"
+            },
+            {
+                "icon": "🚛",
+                "name": "Transport & Logistics"
+            },
+            {
+                "icon": "⚡",
+                "name": "Power Generation"
+            }
+        ]
     }
 }

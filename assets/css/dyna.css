@@ -154,19 +154,19 @@ header {
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
-    overflow: hidden;
+    overflow: visible;
 }
 
-/* Laser scan animation at bottom of header */
+/* Static laser glow at bottom of header - centered */
 header::after {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 0;
-    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
     height: 2px;
     background: linear-gradient(90deg, transparent, var(--laser-green), transparent);
-    animation: scan 3s linear infinite;
     box-shadow: 0 0 10px rgba(169, 231, 2, 0.6);
 }
 
@@ -307,23 +307,20 @@ header::after {
     --parallax-offset: 0px;
 }
 
-/* Laser Scan Animation at top of hero */
+/* Static laser glow at top of hero - centered */
 .hero::before {
     content: '';
     position: absolute;
     top: 0;
-    left: 0;
-    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
     height: 2px;
     background: linear-gradient(90deg, transparent, var(--laser-green), transparent);
-    animation: scan 3s linear infinite;
     box-shadow: 0 0 10px rgba(169, 231, 2, 0.6);
 }
 
-@keyframes scan {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(100%); }
-}
+/* Removed scan animation - now using static laser glows */
 
 /* Technical grid pattern background with gears */
 .hero::after {
