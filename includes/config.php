@@ -4,6 +4,11 @@
  * Core configuration file for PHP websites
  */
 
+// Start session if not already started (required for admin mode)
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
 // Load environment variables
 require_once __DIR__ . '/env-loader.php';
 
