@@ -59,7 +59,8 @@ function initImageEditing() {
         img.addEventListener('click', function() {
             const field = this.getAttribute('data-field');
             const placeholder = this.getAttribute('data-placeholder');
-            const imgElement = this;
+            const wrapper = this;
+            const imgElement = this.querySelector('img');
 
             // Create file input
             const input = document.createElement('input');
@@ -75,7 +76,7 @@ function initImageEditing() {
                     formData.append('field', field);
 
                     // Show loading state
-                    imgElement.style.opacity = '0.5';
+                    wrapper.style.opacity = '0.5';
 
                     // Upload to server
                     fetch('admin-upload.php', {
@@ -102,7 +103,7 @@ function initImageEditing() {
                         if (data.success) {
                             // Update image src with uploaded file URL
                             imgElement.src = data.file.url;
-                            imgElement.style.opacity = '1';
+                            wrapper.style.opacity = '1';
 
                             // Store URL in editedFields for saving
                             editedFields[field] = data.file.url;
@@ -110,12 +111,12 @@ function initImageEditing() {
                             alert('Image uploaded! Click "Save Changes" to save permanently.');
                         } else {
                             alert('Upload failed: ' + data.message);
-                            imgElement.style.opacity = '1';
+                            wrapper.style.opacity = '1';
                         }
                     })
                     .catch(error => {
                         alert('Upload error: ' + error);
-                        imgElement.style.opacity = '1';
+                        wrapper.style.opacity = '1';
                     });
                 }
             };
