@@ -37,8 +37,8 @@
     # Block access to includes, content, and cache directories (except JS files)
     RewriteRule ^(includes|content|cache)/ - [F,L]
 
-    # Block access to admin files for non-authenticated users
-    RewriteRule ^(admin-save|admin-upload|view-logs)\.php$ - [F,L]
+    # Admin files (admin-save.php, admin-upload.php) have their own PHP authentication
+    # Do not block them here - they check isAdminMode() internally
 </IfModule>
 
 # Disable directory browsing
