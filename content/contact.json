@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Contact Dynasurf | Get a Quote | Sandbach, Cheshire",
-    "description": "Contact Dynasurf for hydraulic repairs, cylinder honing & chrome plating quotes. Call 01270 763032 or email sales@dynasurf.co.uk. Same-day service available.",
+    "description": "Contact Dynasurf for hydraulic repairs, cylinder honing & chrome plating quotes. Call 01270 763032 or WhatsApp us. Same-day service available.",
     "keywords": "contact Dynasurf Sandbach, engineering services Cheshire contact, hydraulic repair quote, chrome plating enquiry"
   },
   "hero": {
@@ -25,11 +25,11 @@
       "additional": "Emergency Line: Available 24/7 for urgent repairs"
     },
     {
-      "icon": "✉️",
-      "title": "Email",
-      "primary": "sales@dynasurf.co.uk",
-      "description": "Send detailed enquiries, drawings, or photos of components requiring attention. We respond to all emails within 2 hours during business hours.",
-      "additional": "Emergency: emergency@dynasurf.co.uk"
+      "icon": "💬",
+      "title": "WhatsApp",
+      "primary": "07940 171641",
+      "description": "Send photos, drawings, or enquiries directly via WhatsApp for fast responses. Perfect for sending component images and getting quick advice.",
+      "additional": "Tap to open WhatsApp chat"
     },
     {
       "icon": "📍",

@@ -17,9 +17,9 @@
     "title": "Expert Cylinder Tube Honing & Surface Restoration",
     "subtitle": "Restoring cylinder bores to optimal condition with industry-leading precision",
     "content": [
-      "Cylinder tube honing is a precision machining process that creates a perfectly smooth, cross-hatched surface finish inside hydraulic and pneumatic cylinders. This specialised abrasive machining process removes imperfections, restores proper geometry, and creates the ideal surface texture for optimal seal performance and longevity.",
+      "Cylinder tube honing is a precision machining process that creates a perfectly smooth surface finish inside hydraulic and pneumatic cylinders. This specialised abrasive machining process removes imperfections, restores proper geometry, and creates the ideal surface texture for optimal seal performance and longevity.",
       "At Dynasurf, we utilise advanced honing equipment capable of handling cylinders up to 300mm internal diameter and 2.2 meters in length - capabilities that set us apart from most competitors. Our honing process addresses common cylinder problems including scratches, scoring, corrosion, ovality, taper, and general wear.",
-      "The cross-hatch pattern created by honing is crucial for proper lubrication retention, ensuring smooth operation and extending seal life. Our precision honing achieves surface finishes between Ra 0.2 to 0.4 microns, meeting or exceeding manufacturer specifications."
+      "Our precision honing achieves surface finishes between Ra 0.2 to 0.4 microns, meeting or exceeding manufacturer specifications."
     ],
     "image": "assets/images/Cylinder Tube Honing.jpg"
   },
@@ -41,18 +41,14 @@
       },
       {
         "label": "Geometry Correction",
-        "description": "Removes up to 0.5mm material"
-      },
-      {
-        "label": "Cross-Hatch Angle",
-        "description": "45-60 degrees optimised for application"
+        "description": "Removes up to 1mm material"
       },
       {
         "label": "Tolerance",
         "description": "Cylindricity within 0.02mm"
       }
     ],
-    "additional_content": "We use diamond and CBN (Cubic Boron Nitride) honing stones selected specifically for each material type, ensuring optimal cutting performance and surface finish. Our CNC-controlled honing machines maintain consistent pressure and speed throughout the process.",
+    "additional_content": "We use a variety of honing stones selected specifically for each material type, ensuring optimal cutting performance and surface finish. Our CNC-controlled honing machines maintain consistent pressure and speed throughout the process.",
     "image": "https://placehold.co/600x400/e5e7eb/6b7280?text=Precision+measuring+equipment+checking+cylinder+bore"
   },
   "process": {
@@ -99,11 +95,6 @@
         "icon": "📐",
         "title": "Ovality & Taper",
         "description": "Geometric distortion causing uneven wear and poor sealing"
-      },
-      {
-        "icon": "⚡",
-        "title": "Glazing & Polish",
-        "description": "Over-smooth surfaces that prevent proper lubrication retention"
       }
     ],
     "image": "https://placehold.co/600x400/e5e7eb/6b7280?text=Before+and+after+cylinder+honing+comparison"
@@ -163,7 +154,7 @@
       {
         "icon": "✓",
         "title": "Complete Service",
-        "description": "Honing, chrome plating, and seal replacement all under one roof"
+        "description": "Honing and seal replacement all under one roof"
       }
     ]
   },

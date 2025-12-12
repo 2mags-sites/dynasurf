@@ -205,28 +205,7 @@ require_once 'includes/header.php';
             </div>
 
             <!-- CTA Section -->
-            <div class="cta-section" style="margin-top: 4rem;">
-                <h2><?php echo editable($content['cta']['title'] ?? 'Need Emergency Hydraulic Service?', 'cta.title'); ?></h2>
-                <p><?php echo editable($content['cta']['subtitle'] ?? '24/7 rapid response to minimise your downtime - Every minute counts', 'cta.subtitle'); ?></p>
-                <?php if (isset($content['cta']['emergency_note'])): ?>
-                    <p class="emergency-note" style="color: #e74c3c; font-weight: bold; margin: 1rem 0;">
-                        <?php echo editable($content['cta']['emergency_note'], 'cta.emergency_note'); ?>
-                    </p>
-                <?php endif; ?>
-                <div class="cta-phones">
-                    <div class="phone-item">
-                        📞 <?php echo editable($content['cta']['phone'] ?? '01270 763032', 'cta.phone'); ?>
-                    </div>
-                    <div class="phone-item">
-                        ✉️ <?php echo editable($content['cta']['email'] ?? 'emergency@dynasurf.co.uk', 'cta.email'); ?>
-                    </div>
-                </div>
-                <div>
-                    <a href="<?php echo htmlspecialchars($content['cta']['button_link'] ?? '/contact.php'); ?>" class="btn btn-secondary" style="background: #e74c3c; border-color: #e74c3c;">
-                        <?php echo editable($content['cta']['button_text'] ?? 'Call Emergency Service', 'cta.button_text'); ?>
-                    </a>
-                </div>
-            </div>
+            <?php $cta_embedded = true; $cta_button_style = 'background: #e74c3c; border-color: #e74c3c;'; include __DIR__ . '/includes/cta.php'; ?>
         </div>
     </main>
 

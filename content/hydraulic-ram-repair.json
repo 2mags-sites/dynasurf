@@ -29,19 +29,11 @@
     "specs": [
       {
         "label": "Cylinder Sizes",
-        "description": "From small actuators to large industrial rams up to 300mm bore diameter"
-      },
-      {
-        "label": "Rod Lengths",
-        "description": "Up to 2.2 meters with precision straightening capabilities"
+        "description": "From small actuators to large industrial rams"
       },
       {
         "label": "Pressure Testing",
         "description": "Full pressure testing up to working pressure plus safety margin"
-      },
-      {
-        "label": "Chrome Plating",
-        "description": "Hard chrome plating up to 0.5mm thickness for maximum durability"
       },
       {
         "label": "Honing Precision",
@@ -146,10 +138,6 @@
     {
       "question": "Do you offer on-site hydraulic repair services?",
       "answer": "While we primarily operate from our fully-equipped Sandbach workshop for precision repairs, we can arrange collection and delivery services throughout the UK. For large or fixed installations, we can provide on-site assessment and some field repairs, though most precision work requires our workshop facilities."
-    },
-    {
-      "question": "What warranty do you provide on repairs?",
-      "answer": "All our hydraulic ram repairs come with a 12-month warranty covering workmanship and parts replaced during the repair. This includes all seals, chrome plating, honing work, and machining. The warranty is valid under normal operating conditions and covers any defects in our repair work."
     },
     {
       "question": "Can you manufacture replacement parts if originals are unavailable?",

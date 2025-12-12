@@ -13,12 +13,15 @@ define('SITE_TITLE', 'Dynasurf (UK) Ltd - Precision Engineering Since 1971');
 define('SITE_URL', EnvLoader::get('APP_URL', 'https://dynasurf.co.uk'));
 define('SITE_EMAIL', 'sales@dynasurf.co.uk');
 define('SITE_PHONE', '01270 763032');
+define('SITE_WHATSAPP', '07940 171641');
+define('SITE_WHATSAPP_LINK', '447940171641'); // For wa.me links (no + or spaces)
 
 // Business Information
 $business_info = [
     'name' => 'Dynasurf (UK) Ltd',
     'phone' => '01270 763032',
-    'email' => 'sales@dynasurf.co.uk',
+    'whatsapp' => '07940 171641',
+    'whatsapp_link' => '447940171641',
     'address' => 'Millbuck Way, Springvale Industrial Estate, Sandbach, Cheshire, CW11 3GQ',
     'hours' => 'Mon-Thu: 7:15am-4:30pm, Fri: 7:15am-12noon',
     'company_number' => '',

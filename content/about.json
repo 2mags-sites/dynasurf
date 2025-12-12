@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "About Dynasurf | 50+ Years Precision Engineering Excellence",
-    "description": "Established 1971, Dynasurf provides expert hydraulic repairs, cylinder honing & chrome plating from our Sandbach facility. Learn about our capabilities and commitment to quality.",
+    "description": "Established 1971, Dynasurf provides expert hydraulic repairs, cylinder honing & precision engineering from our Sandbach facility. Learn about our capabilities and commitment to quality.",
     "keywords": "precision engineering company Cheshire, Dynasurf UK Ltd, surface engineering since 1971, Sandbach engineering specialists"
   },
   "hero": {
@@ -16,7 +16,7 @@
     "title": "Precision Engineering Heritage Since 1971",
     "subtitle": "Your trusted partner for hydraulic repairs, surface engineering, and component manufacturing",
     "content": [
-      "Established in 1971, Dynasurf UK Ltd has been at the forefront of precision engineering and surface treatment technology for over five decades. What began as a small engineering workshop in Sandbach, Cheshire, has evolved into one of the UK's leading specialists in hydraulic system repair, cylinder honing, hard chrome plating, and precision component manufacturing.",
+      "Established in 1971, Dynasurf UK Ltd has been at the forefront of precision engineering and surface treatment technology for over five decades. What began as a small engineering workshop in Sandbach, Cheshire, has evolved into one of the UK's leading specialists in hydraulic system repair, cylinder honing, and precision component manufacturing.",
       "Throughout our journey, we've remained true to our founding principles of technical excellence, customer service, and continuous innovation. Our commitment to quality has seen us grow from serving local agricultural and construction businesses to supporting major industrial manufacturers, automotive companies, and engineering specialists across the United Kingdom and beyond.",
       "Today, Dynasurf combines traditional craftsmanship with cutting-edge technology, maintaining the personal service of a family business while delivering the capabilities and quality standards demanded by modern industry. Our reputation has been built component by component, repair by repair, through decades of consistent performance and reliability."
     ],
@@ -30,11 +30,7 @@
         "label": "Precision Honing",
         "description": "Cylinder tubes up to 300mm diameter and 2.2 meters length"
       },
-      {
-        "label": "Hard Chrome Plating",
-        "description": "In-house plating facility with thickness up to 0.5mm"
-      },
-      {
+            {
         "label": "CNC Machining",
         "description": "Latest generation computer-controlled equipment for precision manufacturing"
       },
@@ -51,7 +47,7 @@
         "description": "Extensive inventory for rapid response and same-day service"
       }
     ],
-    "additional_content": "Our facility operates with ISO quality principles, ensuring consistent results and full traceability for all work performed. We've invested heavily in the latest technology while maintaining the skilled workforce that makes the difference in complex engineering challenges.",
+    "additional_content": "Our facility operates with rigorous quality principles, ensuring consistent results and full traceability for all work performed. We've invested heavily in the latest technology while maintaining the skilled workforce that makes the difference in complex engineering challenges.",
     "image": "https://placehold.co/600x400/e5e7eb/6b7280?text=Modern+engineering+equipment+and+workshop"
   },
   "team": {
@@ -88,7 +84,7 @@
     "standards": [
       {
         "icon": "✅",
-        "title": "ISO Quality Systems",
+        "title": "Quality Management",
         "description": "Structured quality management systems ensuring consistent results and continuous improvement"
       },
       {
@@ -100,11 +96,6 @@
         "icon": "📋",
         "title": "Documentation & Traceability",
         "description": "Complete documentation of all processes with full material and process traceability"
-      },
-      {
-        "icon": "🛡️",
-        "title": "Warranty Coverage",
-        "description": "Comprehensive 12-month warranty on all repairs and manufacturing work"
       }
     ],
     "image": "https://placehold.co/600x400/e5e7eb/6b7280?text=Quality+control+and+measurement+equipment"

@@ -234,23 +234,7 @@ require_once 'includes/header.php';
             </div>
 
             <!-- CTA Section -->
-            <div class="cta-section" style="margin-top: 4rem;">
-                <h2><?php echo editable($content['cta']['title'] ?? 'Experience the Dynasurf Difference', 'cta.title'); ?></h2>
-                <p><?php echo editable($content['cta']['subtitle'] ?? '50+ years of engineering excellence at your service', 'cta.subtitle'); ?></p>
-                <div class="cta-phones">
-                    <div class="phone-item">
-                        📞 <?php echo editable($content['cta']['phone'] ?? '01270 763032', 'cta.phone'); ?>
-                    </div>
-                    <div class="phone-item">
-                        ✉️ <?php echo editable($content['cta']['email'] ?? 'sales@dynasurf.co.uk', 'cta.email'); ?>
-                    </div>
-                </div>
-                <div>
-                    <a href="<?php echo htmlspecialchars($content['cta']['button_link'] ?? '/contact'); ?>" class="btn btn-secondary">
-                        <?php echo editable($content['cta']['button_text'] ?? 'Contact Our Team', 'cta.button_text'); ?>
-                    </a>
-                </div>
-            </div>
+            <?php $cta_embedded = true; include __DIR__ . '/includes/cta.php'; ?>
         </div>
     </main>
 

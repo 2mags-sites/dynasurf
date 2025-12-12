@@ -19,7 +19,7 @@
     "content": [
       "We manufacture custom hydraulic hose assemblies for industrial, construction, and agricultural applications. Our in-house capabilities include cutting, crimping, and testing of hydraulic hoses to meet exact specifications and industry standards.",
       "From standard industrial hoses to specialized high-pressure applications, we provide complete hydraulic hose solutions with quick turnaround times and competitive pricing. All assemblies are pressure tested to ensure reliability and safety.",
-      "Our expertise covers working pressures from low-pressure return lines to ultra-high-pressure applications exceeding 10,000 PSI, with temperature ratings suitable for the most demanding industrial environments."
+      "Our expertise covers working pressures from low-pressure return lines to ultra-high-pressure applications, with temperature ratings suitable for the most demanding industrial environments."
     ],
     "image": "assets/images/hydraulic_hose_manufacturing.jpg"
   },
@@ -33,7 +33,7 @@
       },
       {
         "label": "Pressure Ratings",
-        "description": "Low pressure to 10,000+ PSI applications"
+        "description": "Low pressure to ultra-high-pressure applications"
       },
       {
         "label": "Temperature Range",
@@ -42,10 +42,6 @@
       {
         "label": "Fittings",
         "description": "BSP, NPT, JIC, SAE, Metric, and custom fittings"
-      },
-      {
-        "label": "Testing",
-        "description": "Proof pressure testing to 1.5x working pressure"
       }
     ],
     "additional_content": "We stock a comprehensive range of hydraulic hose types including steel wire reinforced, textile reinforced, and thermoplastic hoses. Our crimping machines ensure proper assembly with consistent, reliable connections every time.",
@@ -143,8 +139,8 @@
     "features": [
       {
         "icon": "✓",
-        "title": "50+ Years Experience",
-        "description": "Established expertise in hydraulic systems and hose manufacturing since 1971"
+        "title": "BFPA Trained Technicians",
+        "description": "British Fluid Power Association trained technicians ensuring industry-leading expertise"
       },
       {
         "icon": "✓",
@@ -169,7 +165,7 @@
   "faqs": [
     {
       "question": "What sizes of hydraulic hose can you manufacture?",
-      "answer": "We can manufacture hydraulic hose assemblies from 1/4\" up to 2\" diameter in virtually any length required. Our equipment handles both metric and imperial sizing, with working pressures from low-pressure return lines up to ultra-high-pressure applications exceeding 10,000 PSI."
+      "answer": "We can manufacture hydraulic hose assemblies from 1/4\" up to 2\" diameter in virtually any length required. Our equipment handles both metric and imperial sizing, with working pressures from low-pressure return lines up to ultra-high-pressure applications."
     },
     {
       "question": "How quickly can you manufacture custom hose assemblies?",

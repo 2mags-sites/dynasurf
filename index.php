@@ -218,8 +218,8 @@ include __DIR__ . '/includes/header.php';
                     <a href="/news" class="btn-link">Read More →</a>
                 </div>
                 <div class="service-card">
-                    <h3>ISO Certification Renewed</h3>
-                    <p>Dynasurf has successfully renewed its ISO certifications, demonstrating our commitment to quality...</p>
+                    <h3>Quality Standards Maintained</h3>
+                    <p>Dynasurf continues to uphold the highest standards in precision engineering, demonstrating our commitment to quality...</p>
                     <a href="/news" class="btn-link">Read More →</a>
                 </div>
             </div>
@@ -227,27 +227,6 @@ include __DIR__ . '/includes/header.php';
     </section>
 
     <!-- CTA Section -->
-    <section class="section">
-        <div class="container">
-            <div class="cta-section">
-                <h2><?php echo editable($content['cta']['title'] ?? 'Need Precision Engineering Services?', 'cta.title'); ?></h2>
-                <p><?php echo editable($content['cta']['subtitle'] ?? 'Get a quote today for hydraulic repairs, cylinder honing, or hydraulic hose manufacturing', 'cta.subtitle'); ?></p>
-
-                <div class="cta-phones">
-                    <div class="phone-item">
-                        📞 <?php echo editable($content['cta']['phone'] ?? '01270 763032', 'cta.phone'); ?>
-                    </div>
-                    <div class="phone-item">
-                        ✉️ <?php echo editable($content['cta']['email'] ?? 'sales@dynasurf.co.uk', 'cta.email'); ?>
-                    </div>
-                </div>
-                <div>
-                    <a href="contact.php" class="btn btn-secondary">
-                        <?php echo editable($content['cta']['button_text'] ?? 'Get Quote Now', 'cta.button_text'); ?>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+    <?php include __DIR__ . '/includes/cta.php'; ?>
 
 <?php include __DIR__ . '/includes/footer.php'; ?>
