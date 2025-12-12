@@ -10,7 +10,23 @@
             "Our state-of-the-art facility is equipped with advanced machinery and operated by skilled engineers who bring decades of combined experience.",
             "We pride ourselves on delivering exceptional quality, fast turnaround times, and reliable service that keeps your operations running smoothly."
         ],
-        "button_text": "Learn About Us"
+        "button_text": "Learn About Us",
+        "image": "assets/images/man-machine.jpg"
+    },
+    "emergency": {
+        "title": "Emergency Express Services",
+        "content": [
+            "When equipment failure threatens your operations, every hour counts. Our emergency express service provides rapid response repairs to get your critical equipment back in operation as quickly as possible."
+        ],
+        "features": [
+            "✓ Same-day service for urgent repairs",
+            "✓ Materials kept in stock for immediate use",
+            "✓ Dedicated express service team",
+            "✓ Available for all core services"
+        ],
+        "button_text": "Contact Us",
+        "button_link": "/contact.php",
+        "image": "assets/images/emergency-service.jpg"
     },
     "why_choose": {
         "title": "Why Choose Dynasurf?",

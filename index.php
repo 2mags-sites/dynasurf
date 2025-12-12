@@ -86,7 +86,7 @@ include __DIR__ . '/includes/header.php';
                     </a>
                 </div>
                 <div class="content-image">
-                    <img src="assets/images/man-machine.jpg" alt="Dynasurf Engineering Facility">
+                    <?php echo editableImage($content['about']['image'] ?? '', 'about.image', 'Click to upload image', 'Dynasurf Engineering Facility'); ?>
                 </div>
             </div>
         </div>
@@ -192,7 +192,7 @@ include __DIR__ . '/includes/header.php';
                     </a>
                 </div>
                 <div class="content-image">
-                    <img src="https://placehold.co/600x400/e5e7eb/6b7280?text=Emergency+repair+service+team+at+work" alt="Emergency Express Service">
+                    <?php echo editableImage($content['emergency']['image'] ?? '', 'emergency.image', 'Click to upload image', 'Emergency Express Service'); ?>
                 </div>
             </div>
         </div>
