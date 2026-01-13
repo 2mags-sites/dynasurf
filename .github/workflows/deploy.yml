@@ -45,22 +45,22 @@ jobs:
         ls -la content/
 
     - name: Deploy to dynasurf.co.uk
-      uses: appleboy/scp-action@v0.1.7
+      uses: appleboy/scp-action@v0.1.4
       with:
-        host: ${{ secrets.PROD_HOST }}
-        username: ${{ secrets.PROD_USERNAME }}
-        key: ${{ secrets.PROD_SSH_KEY }}
+        host: ${{ secrets.WHM_HOST }}
+        username: ${{ secrets.WHM_USERNAME }}
+        key: ${{ secrets.WHM_SSH_KEY }}
         source: "."
         target: "${{ env.DEPLOY_PATH }}"
         rm: false
         strip_components: 0
 
     - name: Set permissions
-      uses: appleboy/ssh-action@v1.0.3
+      uses: appleboy/ssh-action@v0.1.5
       with:
-        host: ${{ secrets.PROD_HOST }}
-        username: ${{ secrets.PROD_USERNAME }}
-        key: ${{ secrets.PROD_SSH_KEY }}
+        host: ${{ secrets.WHM_HOST }}
+        username: ${{ secrets.WHM_USERNAME }}
+        key: ${{ secrets.WHM_SSH_KEY }}
         script: |
           DEPLOY_PATH="${{ env.DEPLOY_PATH }}"
           CPANEL_USER="${{ env.CPANEL_USER }}"
