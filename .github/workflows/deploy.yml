@@ -1,102 +1,102 @@
-name: Smart Deploy to Subdomain
+name: Deploy to Production
 
 on:
   push:
     branches: [ main ]
   workflow_dispatch:
 
+env:
+  DEPLOY_PATH: /home/dynasurfco/public_html
+  CPANEL_USER: dynasurfco
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - name: 🚀 Checkout code
-      uses: actions/checkout@v3
+    - name: Checkout code
+      uses: actions/checkout@v4
       with:
-        fetch-depth: 2  # Need previous commit to detect changes
+        fetch-depth: 2
 
-    - name: 🔍 Check what changed
+    - name: Check what changed
       id: changes
       run: |
-        # Check if any content/*.json files were modified in this commit
-        # Handle initial commit (no HEAD~1)
         if git rev-parse HEAD~1 >/dev/null 2>&1; then
           if git diff --name-only HEAD~1 HEAD | grep -q "^content/.*\.json$"; then
             echo "content_changed=true" >> $GITHUB_OUTPUT
-            echo "📝 Content files were modified - will deploy everything"
+            echo "Content files were modified - will deploy everything"
           else
             echo "content_changed=false" >> $GITHUB_OUTPUT
-            echo "🔧 Only code changes - will preserve production content"
+            echo "Only code changes - will preserve production content"
           fi
-
-          # List changed files for transparency
-          echo "Changed files in this commit:"
+          echo "Changed files:"
           git diff --name-only HEAD~1 HEAD
         else
-          # Initial commit - deploy everything
           echo "content_changed=true" >> $GITHUB_OUTPUT
-          echo "🎉 Initial commit - deploying all files"
+          echo "Initial commit - deploying all files"
         fi
 
-    - name: 📦 Prepare deployment
+    - name: Prepare deployment
       run: |
         echo "Preparing files for deployment..."
-
-        # Always exclude backup files from deployment
         rm -rf content/backups 2>/dev/null || true
-
-        # List what will be deployed
         echo "Content files to deploy:"
         ls -la content/
 
-    - name: 📤 Deploy to dynasurf.2magpiesseo.co.uk
-      uses: appleboy/scp-action@v0.1.4
+    - name: Deploy to dynasurf.co.uk
+      uses: appleboy/scp-action@v0.1.7
       with:
-        host: ${{ secrets.WHM_HOST }}
-        username: ${{ secrets.WHM_USERNAME }}
-        key: ${{ secrets.WHM_SSH_KEY }}
+        host: ${{ secrets.PROD_HOST }}
+        username: ${{ secrets.PROD_USERNAME }}
+        key: ${{ secrets.PROD_SSH_KEY }}
         source: "."
-        target: "/home/twomagseo/dynasurf.2magpiesseo.co.uk"
+        target: "${{ env.DEPLOY_PATH }}"
         rm: false
         strip_components: 0
 
-    - name: 🔒 Set correct permissions
-      uses: appleboy/ssh-action@v0.1.5
+    - name: Set permissions
+      uses: appleboy/ssh-action@v1.0.3
       with:
-        host: ${{ secrets.WHM_HOST }}
-        username: ${{ secrets.WHM_USERNAME }}
-        key: ${{ secrets.WHM_SSH_KEY }}
+        host: ${{ secrets.PROD_HOST }}
+        username: ${{ secrets.PROD_USERNAME }}
+        key: ${{ secrets.PROD_SSH_KEY }}
         script: |
+          DEPLOY_PATH="${{ env.DEPLOY_PATH }}"
+          CPANEL_USER="${{ env.CPANEL_USER }}"
+
           # Set correct ownership
-          chown -R twomagseo:twomagseo /home/twomagseo/dynasurf.2magpiesseo.co.uk
+          chown -R ${CPANEL_USER}:${CPANEL_USER} ${DEPLOY_PATH}
 
           # Set directory permissions
-          find /home/twomagseo/dynasurf.2magpiesseo.co.uk -type d -exec chmod 755 {} \;
+          find ${DEPLOY_PATH} -type d -exec chmod 755 {} \;
 
           # Set file permissions
-          find /home/twomagseo/dynasurf.2magpiesseo.co.uk -type f -exec chmod 644 {} \;
+          find ${DEPLOY_PATH} -type f -exec chmod 644 {} \;
 
           # Make uploads directory writable
-          if [ -d "/home/twomagseo/dynasurf.2magpiesseo.co.uk/assets/images/uploads" ]; then
-            chmod 777 /home/twomagseo/dynasurf.2magpiesseo.co.uk/assets/images/uploads
+          if [ -d "${DEPLOY_PATH}/assets/images/uploads" ]; then
+            chmod 755 ${DEPLOY_PATH}/assets/images/uploads
+          else
+            mkdir -p ${DEPLOY_PATH}/assets/images/uploads
+            chmod 755 ${DEPLOY_PATH}/assets/images/uploads
           fi
 
-          # Make content/backups directory writable for saving backups
-          if [ -d "/home/twomagseo/dynasurf.2magpiesseo.co.uk/content/backups" ]; then
-            chmod 777 /home/twomagseo/dynasurf.2magpiesseo.co.uk/content/backups
+          # Make content directory writable for admin editing
+          chmod 755 ${DEPLOY_PATH}/content
+          find ${DEPLOY_PATH}/content -type f -name "*.json" -exec chmod 644 {} \;
+
+          # Make content/backups directory writable
+          if [ -d "${DEPLOY_PATH}/content/backups" ]; then
+            chmod 755 ${DEPLOY_PATH}/content/backups
           else
-            mkdir -p /home/twomagseo/dynasurf.2magpiesseo.co.uk/content/backups
-            chmod 777 /home/twomagseo/dynasurf.2magpiesseo.co.uk/content/backups
+            mkdir -p ${DEPLOY_PATH}/content/backups
+            chmod 755 ${DEPLOY_PATH}/content/backups
           fi
 
           # Protect .env file
-          if [ -f "/home/twomagseo/dynasurf.2magpiesseo.co.uk/.env" ]; then
-            chmod 600 /home/twomagseo/dynasurf.2magpiesseo.co.uk/.env
+          if [ -f "${DEPLOY_PATH}/.env" ]; then
+            chmod 600 ${DEPLOY_PATH}/.env
           fi
 
-          # Report what was deployed
-          if [ "${{ steps.changes.outputs.content_changed }}" == "true" ]; then
-            echo "✅ Deployed: Code + Content files"
-          else
-            echo "✅ Deployed: Code only (production content preserved)"
-          fi
+          echo "Deployed to dynasurf.co.uk"

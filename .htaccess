@@ -26,9 +26,10 @@
     Deny from all
 </FilesMatch>
 
-# Protect includes directory
+# Protect includes directory and URL rewrites
 <IfModule mod_rewrite.c>
     RewriteEngine On
+    RewriteBase /
 
     # Allow JavaScript files from includes directory (needed for admin mode)
     RewriteCond %{REQUEST_URI} ^/includes/.*\.js$ [NC]
@@ -39,6 +40,18 @@
 
     # Admin files (admin-save.php, admin-upload.php) have their own PHP authentication
     # Do not block them here - they check isAdminMode() internally
+
+    # Blog URL Rewrites
+    # /blog/ -> blog.php (listing page)
+    RewriteRule ^blog/?$ blog.php [L,QSA]
+
+    # /blog/page/2/ -> blog.php?page=2 (pagination)
+    RewriteRule ^blog/page/([0-9]+)/?$ blog.php?page=$1 [L,QSA]
+
+    # /blog/post-slug -> blog-post.php?slug=post-slug (single post)
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^blog/([a-zA-Z0-9\-]+)/?$ blog-post.php?slug=$1 [L,QSA]
 </IfModule>
 
 # Disable directory browsing

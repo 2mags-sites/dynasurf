@@ -198,33 +198,94 @@ include __DIR__ . '/includes/header.php';
         </div>
     </section>
 
-    <!-- News Section (Placeholder for WordPress Integration) -->
+    <!-- News Section - WordPress Integration -->
+    <?php
+    require_once __DIR__ . '/includes/blog-fetcher.php';
+    $latest_posts = fetchLatestBlogPosts(3);
+    ?>
     <section class="section">
         <div class="container">
             <div class="section-heading">
-                <h2>Latest News</h2>
-                <p>Updates from Dynasurf</p>
+                <h2><?php echo editable($content['news']['title'] ?? 'Latest News', 'news.title'); ?></h2>
+                <p><?php echo editable($content['news']['subtitle'] ?? 'Updates from Dynasurf', 'news.subtitle'); ?></p>
             </div>
 
+            <?php if ($latest_posts && count($latest_posts) > 0): ?>
             <div class="services-grid">
-                <div class="service-card">
-                    <h3>New Equipment Investment</h3>
-                    <p>We've recently invested in state-of-the-art honing equipment to expand our capacity...</p>
-                    <a href="/news" class="btn-link">Read More →</a>
-                </div>
-                <div class="service-card">
-                    <h3>Extended Operating Hours</h3>
-                    <p>To better serve our customers, we're pleased to announce extended hours for emergency services...</p>
-                    <a href="/news" class="btn-link">Read More →</a>
-                </div>
-                <div class="service-card">
-                    <h3>Quality Standards Maintained</h3>
-                    <p>Dynasurf continues to uphold the highest standards in precision engineering, demonstrating our commitment to quality...</p>
-                    <a href="/news" class="btn-link">Read More →</a>
+                <?php foreach ($latest_posts as $post): ?>
+                <article class="service-card blog-card-home">
+                    <?php if ($post['featured_image']): ?>
+                    <div class="blog-card-image">
+                        <a href="<?php echo $post['link']; ?>">
+                            <img src="<?php echo $post['featured_image']; ?>" alt="<?php echo htmlspecialchars($post['title']); ?>">
+                        </a>
+                    </div>
+                    <?php endif; ?>
+                    <div class="blog-card-body">
+                        <span class="blog-card-date"><?php echo $post['date']; ?></span>
+                        <h3><a href="<?php echo $post['link']; ?>"><?php echo $post['title']; ?></a></h3>
+                        <p><?php echo $post['excerpt']; ?></p>
+                        <a href="<?php echo $post['link']; ?>" class="btn-link">Read More &rarr;</a>
+                    </div>
+                </article>
+                <?php endforeach; ?>
+            </div>
+            <div style="text-align: center; margin-top: 2.5rem;">
+                <a href="/blog/" class="btn btn-secondary">View All News &rarr;</a>
+            </div>
+            <?php else: ?>
+            <div class="services-grid">
+                <div class="service-card" style="grid-column: 1 / -1; text-align: center; padding: 3rem;">
+                    <p style="color: var(--steel);"><?php echo editable($content['news']['fallback'] ?? 'News updates coming soon. Check back for the latest from Dynasurf.', 'news.fallback'); ?></p>
+                    <a href="/news/" class="btn btn-secondary" style="margin-top: 1rem;">Visit Our Blog &rarr;</a>
                 </div>
             </div>
+            <?php endif; ?>
         </div>
     </section>
+
+    <style>
+        /* Homepage Blog Cards */
+        .blog-card-home .blog-card-image {
+            height: 180px;
+            overflow: hidden;
+            border-radius: var(--radius-md) var(--radius-md) 0 0;
+            margin: -2rem -2rem 1.5rem -2rem;
+        }
+
+        .blog-card-home .blog-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .blog-card-home:hover .blog-card-image img {
+            transform: scale(1.05);
+        }
+
+        .blog-card-home .blog-card-date {
+            font-size: 0.8rem;
+            color: var(--laser-green);
+            letter-spacing: 0.05em;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-card-home h3 {
+            font-size: 1.15rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .blog-card-home h3 a {
+            color: var(--chrome);
+            text-decoration: none;
+        }
+
+        .blog-card-home h3 a:hover {
+            color: var(--laser-green);
+        }
+    </style>
 
     <!-- CTA Section -->
     <?php include __DIR__ . '/includes/cta.php'; ?>

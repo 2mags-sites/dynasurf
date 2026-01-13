@@ -1,6 +1,6 @@
 {
     "hero": {
-        "subtitle": "Hydraulic Repairs • Cylinder Honing • Hose Manufacturing"
+        "subtitle": "Hydraulic Repairs \u2022 Cylinder Honing \u2022 Hose Manufacturing"
     },
     "about": {
         "title": "Precision Engineering Since 1970",
@@ -11,7 +11,7 @@
             "We pride ourselves on delivering exceptional quality, fast turnaround times, and reliable service that keeps your operations running smoothly."
         ],
         "button_text": "Learn About Us",
-        "image": "assets/images/man-machine.jpg"
+        "image": "/assets/images/uploads/img_693c4206d6618_1765556742.jpg"
     },
     "emergency": {
         "title": "Emergency Express Services",
@@ -19,46 +19,46 @@
             "When equipment failure threatens your operations, every hour counts. Our emergency express service provides rapid response repairs to get your critical equipment back in operation as quickly as possible."
         ],
         "features": [
-            "✓ Same-day service for urgent repairs",
-            "✓ Materials kept in stock for immediate use",
-            "✓ Dedicated express service team",
-            "✓ Available for all core services"
+            "\u2713 Same-day service for urgent repairs",
+            "\u2713 Materials kept in stock for immediate use",
+            "\u2713 Dedicated express service team",
+            "\u2713 Available for all core services"
         ],
         "button_text": "Contact Us",
         "button_link": "/contact.php",
-        "image": "assets/images/emergency-service.jpg"
+        "image": "/assets/images/uploads/img_693c42cd762a9_1765556941.jpeg"
     },
     "why_choose": {
         "title": "Why Choose Dynasurf?",
         "subtitle": "Industry-leading capabilities with a customer-first approach",
         "features": [
             {
-                "icon": "🎯",
+                "icon": "\ud83c\udfaf",
                 "title": "50+ Years Experience",
                 "description": "Decades of specialized expertise in precision surface engineering and hydraulic systems"
             },
             {
-                "icon": "⚡",
+                "icon": "\u26a1",
                 "title": "Fast Turnaround",
                 "description": "Express services available for urgent repairs and emergency breakdowns"
             },
             {
-                "icon": "✓",
+                "icon": "\u2713",
                 "title": "Quality Guaranteed",
                 "description": "Rigorous testing and inspection ensure every component meets exacting standards"
             },
             {
-                "icon": "🔧",
+                "icon": "\ud83d\udd27",
                 "title": "Advanced Equipment",
                 "description": "State-of-the-art machinery for precision honing, grinding, and manufacturing"
             },
             {
-                "icon": "👥",
+                "icon": "\ud83d\udc65",
                 "title": "Expert Engineers",
                 "description": "Skilled team with comprehensive knowledge of hydraulic and mechanical systems"
             },
             {
-                "icon": "💼",
+                "icon": "\ud83d\udcbc",
                 "title": "Industry Specialists",
                 "description": "Serving manufacturing, construction, automotive, agriculture, and more"
             }
@@ -116,27 +116,27 @@
         "subtitle": "Supporting critical equipment across diverse sectors",
         "items": [
             {
-                "icon": "🏗️",
+                "icon": "\ud83c\udfd7\ufe0f",
                 "name": "Construction & Earthmoving"
             },
             {
-                "icon": "🚜",
+                "icon": "\ud83d\ude9c",
                 "name": "Agricultural Machinery"
             },
             {
-                "icon": "🏭",
+                "icon": "\ud83c\udfed",
                 "name": "Manufacturing & Automation"
             },
             {
-                "icon": "🚗",
+                "icon": "\ud83d\ude97",
                 "name": "Automotive"
             },
             {
-                "icon": "🚛",
+                "icon": "\ud83d\ude9b",
                 "name": "Transport & Logistics"
             },
             {
-                "icon": "⚡",
+                "icon": "\u26a1",
                 "name": "Power Generation"
             }
         ]

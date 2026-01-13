@@ -1,239 +1,245 @@
 {
-  "meta": {
-    "title": "About Dynasurf | 50+ Years Precision Engineering Excellence",
-    "description": "Established 1971, Dynasurf provides expert hydraulic repairs, cylinder honing & precision engineering from our Sandbach facility. Learn about our capabilities and commitment to quality.",
-    "keywords": "precision engineering company Cheshire, Dynasurf UK Ltd, surface engineering since 1971, Sandbach engineering specialists"
-  },
-  "hero": {
-    "title": "About Dynasurf UK Ltd",
-    "subtitle": "50+ years of precision engineering excellence serving industry across the UK",
-    "breadcrumbs": [
-      {"name": "Home", "url": "/"},
-      {"name": "About Dynasurf", "url": ""}
-    ]
-  },
-  "company_overview": {
-    "title": "Precision Engineering Heritage Since 1971",
-    "subtitle": "Your trusted partner for hydraulic repairs, surface engineering, and component manufacturing",
-    "content": [
-      "Established in 1971, Dynasurf UK Ltd has been at the forefront of precision engineering and surface treatment technology for over five decades. What began as a small engineering workshop in Sandbach, Cheshire, has evolved into one of the UK's leading specialists in hydraulic system repair, cylinder honing, and precision component manufacturing.",
-      "Throughout our journey, we've remained true to our founding principles of technical excellence, customer service, and continuous innovation. Our commitment to quality has seen us grow from serving local agricultural and construction businesses to supporting major industrial manufacturers, automotive companies, and engineering specialists across the United Kingdom and beyond.",
-      "Today, Dynasurf combines traditional craftsmanship with cutting-edge technology, maintaining the personal service of a family business while delivering the capabilities and quality standards demanded by modern industry. Our reputation has been built component by component, repair by repair, through decades of consistent performance and reliability."
-    ],
-    "image": "https://placehold.co/600x400/e5e7eb/6b7280?text=Dynasurf+facility+in+Sandbach+Cheshire"
-  },
-  "capabilities": {
-    "title": "Modern Facilities & Advanced Capabilities",
-    "content": "Our purpose-built facility in Sandbach houses state-of-the-art equipment and comprehensive capabilities:",
-    "specs": [
-      {
-        "label": "Precision Honing",
-        "description": "Cylinder tubes up to 300mm diameter and 2.2 meters length"
-      },
+    "meta": {
+        "title": "About Dynasurf | 50+ Years Precision Engineering Excellence",
+        "description": "Established 1971, Dynasurf provides expert hydraulic repairs, cylinder honing & precision engineering from our Sandbach facility. Learn about our capabilities and commitment to quality.",
+        "keywords": "precision engineering company Cheshire, Dynasurf UK Ltd, surface engineering since 1971, Sandbach engineering specialists"
+    },
+    "hero": {
+        "title": "About Dynasurf UK Ltd",
+        "subtitle": "50+ years of precision engineering excellence serving industry across the UK",
+        "breadcrumbs": [
             {
-        "label": "CNC Machining",
-        "description": "Latest generation computer-controlled equipment for precision manufacturing"
-      },
-      {
-        "label": "Pressure Testing",
-        "description": "Comprehensive testing facilities for validation and quality assurance"
-      },
-      {
-        "label": "Quality Control",
-        "description": "Advanced measurement systems and inspection equipment"
-      },
-      {
-        "label": "Material Stocks",
-        "description": "Extensive inventory for rapid response and same-day service"
-      }
-    ],
-    "additional_content": "Our facility operates with rigorous quality principles, ensuring consistent results and full traceability for all work performed. We've invested heavily in the latest technology while maintaining the skilled workforce that makes the difference in complex engineering challenges.",
-    "image": "https://placehold.co/600x400/e5e7eb/6b7280?text=Modern+engineering+equipment+and+workshop"
-  },
-  "team": {
-    "title": "Our Expert Team",
-    "subtitle": "Skilled engineers and craftsmen with decades of collective experience",
-    "content": "Our team represents a unique combination of traditional engineering skills and modern technical knowledge. Many of our key personnel have been with Dynasurf for over 20 years, providing continuity and deep expertise that you simply cannot find elsewhere.",
-    "expertise": [
-      {
-        "icon": "👨‍🔧",
-        "title": "Master Craftsmen",
-        "description": "Time-served engineers with apprenticeships completed in precision engineering disciplines"
-      },
-      {
-        "icon": "🎓",
-        "title": "Technical Specialists",
-        "description": "Qualified engineers with expertise in hydraulics, metallurgy, and surface treatments"
-      },
-      {
-        "icon": "🔬",
-        "title": "Quality Inspectors",
-        "description": "Trained quality control personnel ensuring every component meets specification"
-      },
-      {
-        "icon": "📞",
-        "title": "Customer Support",
-        "description": "Experienced technical sales team providing expert advice and rapid quotations"
-      }
-    ],
-    "image": "https://placehold.co/600x400/e5e7eb/6b7280?text=Skilled+engineering+team+at+work"
-  },
-  "quality_standards": {
-    "title": "Quality Standards & Certifications",
-    "content": "Our commitment to quality goes beyond meeting specifications - we strive to exceed customer expectations:",
-    "standards": [
-      {
-        "icon": "✅",
-        "title": "Quality Management",
-        "description": "Structured quality management systems ensuring consistent results and continuous improvement"
-      },
-      {
-        "icon": "📊",
-        "title": "Measurement & Testing",
-        "description": "Calibrated measurement equipment and comprehensive testing procedures for all work"
-      },
-      {
-        "icon": "📋",
-        "title": "Documentation & Traceability",
-        "description": "Complete documentation of all processes with full material and process traceability"
-      }
-    ],
-    "image": "https://placehold.co/600x400/e5e7eb/6b7280?text=Quality+control+and+measurement+equipment"
-  },
-  "industries": {
-    "title": "Industries We Serve",
-    "subtitle": "Supporting critical equipment across diverse sectors",
-    "content": "Over five decades of operation, Dynasurf has developed expertise across numerous industry sectors, understanding the unique challenges and requirements of each:",
-    "sectors": [
-      {
-        "icon": "🏗️",
-        "title": "Construction & Earthmoving",
-        "description": "Excavators, loaders, cranes, and specialist construction equipment hydraulics"
-      },
-      {
-        "icon": "🚜",
-        "title": "Agricultural Machinery",
-        "description": "Tractors, harvesters, cultivation, and livestock handling equipment"
-      },
-      {
-        "icon": "🏭",
-        "title": "Manufacturing & Automation",
-        "description": "Production line equipment, presses, injection moulding, and material handling"
-      },
-      {
-        "icon": "🚗",
-        "title": "Automotive",
-        "description": "Component reconditioning for gearboxes, engines, steering systems, and chassis parts"
-      },
-      {
-        "icon": "🚛",
-        "title": "Transport & Logistics",
-        "description": "Commercial vehicles, tail lifts, tippers, and materials handling equipment"
-      },
-      {
-        "icon": "⚡",
-        "title": "Power Generation",
-        "description": "Turbine controls, valve actuators, and power plant hydraulic systems"
-      }
-    ],
-    "image": "https://placehold.co/600x400/e5e7eb/6b7280?text=Various+industries+served+by+Dynasurf"
-  },
-  "environmental": {
-    "title": "Environmental Responsibility",
-    "content": "We're committed to sustainable engineering practices that benefit both our customers and the environment:",
-    "commitments": [
-      {
-        "icon": "♻️",
-        "title": "Component Restoration",
-        "description": "Extending equipment life through expert repair reduces waste and conserves resources"
-      },
-      {
-        "icon": "🌱",
-        "title": "Waste Minimisation",
-        "description": "Responsible disposal and recycling of materials with minimal environmental impact"
-      },
-      {
-        "icon": "🔋",
-        "title": "Energy Efficiency",
-        "description": "Modern equipment and efficient processes minimise energy consumption in our operations"
-      },
-      {
-        "icon": "💧",
-        "title": "Process Efficiency",
-        "description": "Closed-loop systems and process optimisation reduce environmental impact"
-      }
-    ],
-    "image": "https://placehold.co/600x400/e5e7eb/6b7280?text=Environmental+responsibility+and+sustainability"
-  },
-  "values": {
-    "title": "Our Values & Commitment",
-    "subtitle": "The principles that guide everything we do",
-    "principles": [
-      {
-        "icon": "🎯",
-        "title": "Technical Excellence",
-        "description": "Continuous investment in skills, equipment, and technology to deliver the highest quality results"
-      },
-      {
-        "icon": "🤝",
-        "title": "Customer Partnership",
-        "description": "Building long-term relationships through reliability, integrity, and exceptional service"
-      },
-      {
-        "icon": "⚡",
-        "title": "Rapid Response",
-        "description": "Understanding the urgency of equipment failures and responding with speed and efficiency"
-      },
-      {
-        "icon": "🛡️",
-        "title": "Quality Assurance",
-        "description": "Never compromising on quality standards, regardless of timeline or complexity"
-      },
-      {
-        "icon": "💡",
-        "title": "Innovation",
-        "description": "Embracing new technologies and methods while respecting proven engineering principles"
-      },
-      {
-        "icon": "🌟",
-        "title": "Continuous Improvement",
-        "description": "Always seeking better ways to serve our customers and enhance our capabilities"
-      }
-    ]
-  },
-  "location": {
-    "title": "Location & Accessibility",
-    "content": "Strategically located in Sandbach, Cheshire, our facility offers excellent accessibility for customers throughout the UK:",
-    "advantages": [
-      {
-        "icon": "🛣️",
-        "title": "Strategic Location",
-        "description": "Easy access from M6 motorway connecting Scotland, Northern England, Midlands, and South"
-      },
-      {
-        "icon": "🚚",
-        "title": "Collection Service",
-        "description": "Comprehensive collection and delivery service throughout the UK for customer convenience"
-      },
-      {
-        "icon": "🏢",
-        "title": "Purpose-Built Facility",
-        "description": "Modern workshop designed specifically for precision engineering and component handling"
-      },
-      {
-        "icon": "📞",
-        "title": "Easy Contact",
-        "description": "Multiple contact methods with knowledgeable staff available for technical discussions"
-      }
-    ],
-    "image": "https://placehold.co/600x400/e5e7eb/6b7280?text=Dynasurf+location+in+Sandbach+Cheshire"
-  },
-  "cta": {
-    "title": "Experience the Dynasurf Difference",
-    "subtitle": "50+ years of engineering excellence at your service",
-    "phone": "01270 763032",
-    "email": "sales@dynasurf.co.uk",
-    "button_text": "Contact Our Team",
-    "button_link": "/contact"
-  }
+                "name": "Home",
+                "url": "/"
+            },
+            {
+                "name": "About Dynasurf",
+                "url": ""
+            }
+        ]
+    },
+    "company_overview": {
+        "title": "Precision Engineering Heritage Since 1971",
+        "subtitle": "Your trusted partner for hydraulic repairs, surface engineering, and component manufacturing",
+        "content": [
+            "Established in 1971, Dynasurf UK Ltd has been at the forefront of precision engineering and surface treatment technology for over five decades. What began as a small engineering workshop in Sandbach, Cheshire, has evolved into one of the UK's leading specialists in hydraulic system repair, cylinder honing, and precision component manufacturing.",
+            "Throughout our journey, we've remained true to our founding principles of technical excellence, customer service, and continuous innovation. Our commitment to quality has seen us grow from serving local agricultural and construction businesses to supporting major industrial manufacturers, automotive companies, and engineering specialists across the United Kingdom and beyond.",
+            "Today, Dynasurf combines traditional craftsmanship with cutting-edge technology, maintaining the personal service of a family business while delivering the capabilities and quality standards demanded by modern industry. Our reputation has been built component by component, repair by repair, through decades of consistent performance and reliability."
+        ],
+        "image": "/assets/images/uploads/img_693c3e4538f33_1765555781.jpg"
+    },
+    "capabilities": {
+        "title": "Modern Facilities & Advanced Capabilities",
+        "content": "Our purpose-built facility in Sandbach houses state-of-the-art equipment and comprehensive capabilities:",
+        "specs": [
+            {
+                "label": "Precision Honing",
+                "description": "Cylinder tubes up to 300mm diameter and 2.2 meters length"
+            },
+            {
+                "label": "CNC Machining",
+                "description": "Latest generation computer-controlled equipment for precision manufacturing"
+            },
+            {
+                "label": "Pressure Testing",
+                "description": "Comprehensive testing facilities for validation and quality assurance"
+            },
+            {
+                "label": "Quality Control",
+                "description": "Advanced measurement systems and inspection equipment"
+            },
+            {
+                "label": "Material Stocks",
+                "description": "Extensive inventory for rapid response and same-day service"
+            }
+        ],
+        "additional_content": "Our facility operates with rigorous quality principles, ensuring consistent results and full traceability for all work performed. We've invested heavily in the latest technology while maintaining the skilled workforce that makes the difference in complex engineering challenges.",
+        "image": "/assets/images/uploads/img_693c3e52aadae_1765555794.jpg"
+    },
+    "team": {
+        "title": "Our Expert Team",
+        "subtitle": "Skilled engineers and craftsmen with decades of collective experience",
+        "content": "Our team represents a unique combination of traditional engineering skills and modern technical knowledge. Many of our key personnel have been with Dynasurf for over 20 years, providing continuity and deep expertise that you simply cannot find elsewhere.",
+        "expertise": [
+            {
+                "icon": "\ud83d\udc68\u200d\ud83d\udd27",
+                "title": "Master Craftsmen",
+                "description": "Time-served engineers with apprenticeships completed in precision engineering disciplines"
+            },
+            {
+                "icon": "\ud83c\udf93",
+                "title": "Technical Specialists",
+                "description": "Qualified engineers with expertise in hydraulics, metallurgy, and surface treatments"
+            },
+            {
+                "icon": "\ud83d\udd2c",
+                "title": "Quality Inspectors",
+                "description": "Trained quality control personnel ensuring every component meets specification"
+            },
+            {
+                "icon": "\ud83d\udcde",
+                "title": "Customer Support",
+                "description": "Experienced technical sales team providing expert advice and rapid quotations"
+            }
+        ],
+        "image": "/assets/images/uploads/img_693c3e7b37425_1765555835.jpg"
+    },
+    "quality_standards": {
+        "title": "Quality Standards & Certifications",
+        "content": "Our commitment to quality goes beyond meeting specifications - we strive to exceed customer expectations:",
+        "standards": [
+            {
+                "icon": "\u2705",
+                "title": "Quality Management",
+                "description": "Structured quality management systems ensuring consistent results and continuous improvement"
+            },
+            {
+                "icon": "\ud83d\udcca",
+                "title": "Measurement & Testing",
+                "description": "Calibrated measurement equipment and comprehensive testing procedures for all work"
+            },
+            {
+                "icon": "\ud83d\udccb",
+                "title": "Documentation & Traceability",
+                "description": "Complete documentation of all processes with full material and process traceability"
+            }
+        ],
+        "image": "/assets/images/uploads/img_693c3e8ecf292_1765555854.jpg"
+    },
+    "industries": {
+        "title": "Industries We Serve",
+        "subtitle": "Supporting critical equipment across diverse sectors",
+        "content": "Over five decades of operation, Dynasurf has developed expertise across numerous industry sectors, understanding the unique challenges and requirements of each:",
+        "sectors": [
+            {
+                "icon": "\ud83c\udfd7\ufe0f",
+                "title": "Construction & Earthmoving",
+                "description": "Excavators, loaders, cranes, and specialist construction equipment hydraulics"
+            },
+            {
+                "icon": "\ud83d\ude9c",
+                "title": "Agricultural Machinery",
+                "description": "Tractors, harvesters, cultivation, and livestock handling equipment"
+            },
+            {
+                "icon": "\ud83c\udfed",
+                "title": "Manufacturing & Automation",
+                "description": "Production line equipment, presses, injection moulding, and material handling"
+            },
+            {
+                "icon": "\ud83d\ude97",
+                "title": "Automotive",
+                "description": "Component reconditioning for gearboxes, engines, steering systems, and chassis parts"
+            },
+            {
+                "icon": "\ud83d\ude9b",
+                "title": "Transport & Logistics",
+                "description": "Commercial vehicles, tail lifts, tippers, and materials handling equipment"
+            },
+            {
+                "icon": "\u26a1",
+                "title": "Power Generation",
+                "description": "Turbine controls, valve actuators, and power plant hydraulic systems"
+            }
+        ],
+        "image": "/assets/images/uploads/img_693c3eee6899b_1765555950.jpg"
+    },
+    "environmental": {
+        "title": "Environmental Responsibility",
+        "content": "We're committed to sustainable engineering practices that benefit both our customers and the environment:",
+        "commitments": [
+            {
+                "icon": "\u267b\ufe0f",
+                "title": "Component Restoration",
+                "description": "Extending equipment life through expert repair reduces waste and conserves resources"
+            },
+            {
+                "icon": "\ud83c\udf31",
+                "title": "Waste Minimisation",
+                "description": "Responsible disposal and recycling of materials with minimal environmental impact"
+            },
+            {
+                "icon": "\ud83d\udd0b",
+                "title": "Energy Efficiency",
+                "description": "Modern equipment and efficient processes minimise energy consumption in our operations"
+            },
+            {
+                "icon": "\ud83d\udca7",
+                "title": "Process Efficiency",
+                "description": "Closed-loop systems and process optimisation reduce environmental impact"
+            }
+        ],
+        "image": "/assets/images/uploads/img_693c3f10c36a6_1765555984.jpg"
+    },
+    "values": {
+        "title": "Our Values & Commitment",
+        "subtitle": "The principles that guide everything we do",
+        "principles": [
+            {
+                "icon": "\ud83c\udfaf",
+                "title": "Technical Excellence",
+                "description": "Continuous investment in skills, equipment, and technology to deliver the highest quality results"
+            },
+            {
+                "icon": "\ud83e\udd1d",
+                "title": "Customer Partnership",
+                "description": "Building long-term relationships through reliability, integrity, and exceptional service"
+            },
+            {
+                "icon": "\u26a1",
+                "title": "Rapid Response",
+                "description": "Understanding the urgency of equipment failures and responding with speed and efficiency"
+            },
+            {
+                "icon": "\ud83d\udee1\ufe0f",
+                "title": "Quality Assurance",
+                "description": "Never compromising on quality standards, regardless of timeline or complexity"
+            },
+            {
+                "icon": "\ud83d\udca1",
+                "title": "Innovation",
+                "description": "Embracing new technologies and methods while respecting proven engineering principles"
+            },
+            {
+                "icon": "\ud83c\udf1f",
+                "title": "Continuous Improvement",
+                "description": "Always seeking better ways to serve our customers and enhance our capabilities"
+            }
+        ]
+    },
+    "location": {
+        "title": "Location & Accessibility",
+        "content": "Strategically located in Sandbach, Cheshire, our facility offers excellent accessibility for customers throughout the UK:",
+        "advantages": [
+            {
+                "icon": "\ud83d\udee3\ufe0f",
+                "title": "Strategic Location",
+                "description": "Easy access from M6 motorway connecting Scotland, Northern England, Midlands, and South"
+            },
+            {
+                "icon": "\ud83d\ude9a",
+                "title": "Collection Service",
+                "description": "Comprehensive collection and delivery service throughout the UK for customer convenience"
+            },
+            {
+                "icon": "\ud83c\udfe2",
+                "title": "Purpose-Built Facility",
+                "description": "Modern workshop designed specifically for precision engineering and component handling"
+            },
+            {
+                "icon": "\ud83d\udcde",
+                "title": "Easy Contact",
+                "description": "Multiple contact methods with knowledgeable staff available for technical discussions"
+            }
+        ],
+        "image": "/assets/images/uploads/img_693c3f7b78b0b_1765556091.png"
+    },
+    "cta": {
+        "title": "Experience the Dynasurf Difference",
+        "subtitle": "50+ years of engineering excellence at your service",
+        "phone": "01270 763032",
+        "email": "sales@dynasurf.co.uk",
+        "button_text": "Contact Our Team",
+        "button_link": "/contact"
+    }
 }

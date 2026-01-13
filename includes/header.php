@@ -119,7 +119,7 @@ if ($current_page == 'index') $current_page = 'home';
                                 <a href="/#services">All Services</a>
                             </div>
                         </li>
-                        <li><a href="/news/" <?php echo $current_page == 'news' ? 'class="active"' : ''; ?>>News</a></li>
+                        <li><a href="/blog/" <?php echo $current_page == 'blog' ? 'class="active"' : ''; ?>>News</a></li>
                         <li><a href="/contact.php" <?php echo $current_page == 'contact' ? 'class="active"' : ''; ?>>Contact</a></li>
                     </ul>
                 </nav>

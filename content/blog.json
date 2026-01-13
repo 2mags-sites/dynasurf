@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "title": "News & Updates | Dynasurf UK Ltd",
+        "description": "Latest news and updates from Dynasurf UK Ltd - precision engineering specialists in hydraulic repairs, cylinder honing, and hose manufacturing since 1971.",
+        "keywords": "dynasurf news, precision engineering updates, hydraulic industry news, engineering blog"
+    },
+    "hero": {
+        "title": "News & Updates",
+        "subtitle": "Latest from Dynasurf UK Ltd"
+    },
+    "noPosts": {
+        "title": "News Coming Soon",
+        "message": "We're preparing some exciting updates. Check back soon for the latest news from Dynasurf."
+    }
+}

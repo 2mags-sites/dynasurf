@@ -1,0 +1,221 @@
+<?php
+/**
+ * Blog Post Fetcher
+ * Fetches latest posts from WordPress REST API at /news/
+ */
+
+function fetchLatestBlogPosts($limit = 3) {
+    // WordPress REST API endpoint
+    $api_url = '/news/wp-json/wp/v2/posts?per_page=' . $limit . '&_embed';
+
+    // Build full URL
+    $base_url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://" . $_SERVER['HTTP_HOST'];
+    $full_url = $base_url . $api_url;
+
+    // Initialize cURL
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $full_url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_TIMEOUT, 3);
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+
+    $response = curl_exec($ch);
+    $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    curl_close($ch);
+
+    // Check if request was successful
+    if ($http_code !== 200 || !$response) {
+        return false;
+    }
+
+    $posts = json_decode($response, true);
+
+    if (!is_array($posts)) {
+        return false;
+    }
+
+    // Process posts to extract needed data
+    $processed_posts = [];
+    foreach ($posts as $post) {
+        $processed_post = [
+            'id' => $post['id'],
+            'slug' => $post['slug'],
+            'title' => $post['title']['rendered'],
+            'excerpt' => wp_trim_words(strip_tags($post['excerpt']['rendered']), 20),
+            'link' => '/blog/' . $post['slug'],
+            'date' => date('F j, Y', strtotime($post['date'])),
+            'featured_image' => null
+        ];
+
+        // Get featured image if available
+        if (isset($post['_embedded']['wp:featuredmedia'][0])) {
+            $media = $post['_embedded']['wp:featuredmedia'][0];
+            if (isset($media['media_details']['sizes']['medium'])) {
+                $processed_post['featured_image'] = $media['media_details']['sizes']['medium']['source_url'];
+            } elseif (isset($media['source_url'])) {
+                $processed_post['featured_image'] = $media['source_url'];
+            }
+        }
+
+        $processed_posts[] = $processed_post;
+    }
+
+    return $processed_posts;
+}
+
+/**
+ * Fetch blog posts with pagination
+ */
+function fetchBlogPostsPaginated($page = 1, $per_page = 9) {
+    // WordPress REST API endpoint with pagination
+    $api_url = '/news/wp-json/wp/v2/posts?per_page=' . $per_page . '&page=' . $page . '&_embed';
+
+    // Build full URL
+    $base_url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://" . $_SERVER['HTTP_HOST'];
+    $full_url = $base_url . $api_url;
+
+    // Initialize cURL
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $full_url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_TIMEOUT, 5);
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt($ch, CURLOPT_HEADER, true);
+
+    $response = curl_exec($ch);
+    $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    $header_size = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
+    curl_close($ch);
+
+    // Check if request was successful
+    if ($http_code !== 200 || !$response) {
+        return ['posts' => [], 'total_pages' => 0, 'current_page' => $page];
+    }
+
+    // Split header and body
+    $header = substr($response, 0, $header_size);
+    $body = substr($response, $header_size);
+
+    // Get total pages from header
+    $total_pages = 1;
+    if (preg_match('/X-WP-TotalPages:\s*(\d+)/i', $header, $matches)) {
+        $total_pages = (int)$matches[1];
+    }
+
+    $posts = json_decode($body, true);
+
+    if (!is_array($posts)) {
+        return ['posts' => [], 'total_pages' => 0, 'current_page' => $page];
+    }
+
+    // Process posts to extract needed data
+    $processed_posts = [];
+    foreach ($posts as $post) {
+        $processed_post = [
+            'id' => $post['id'],
+            'slug' => $post['slug'],
+            'title' => $post['title']['rendered'],
+            'excerpt' => wp_trim_words(strip_tags($post['excerpt']['rendered']), 20),
+            'link' => '/blog/' . $post['slug'],
+            'date' => date('F j, Y', strtotime($post['date'])),
+            'featured_image' => null
+        ];
+
+        // Get featured image if available
+        if (isset($post['_embedded']['wp:featuredmedia'][0])) {
+            $media = $post['_embedded']['wp:featuredmedia'][0];
+            if (isset($media['media_details']['sizes']['medium'])) {
+                $processed_post['featured_image'] = $media['media_details']['sizes']['medium']['source_url'];
+            } elseif (isset($media['source_url'])) {
+                $processed_post['featured_image'] = $media['source_url'];
+            }
+        }
+
+        $processed_posts[] = $processed_post;
+    }
+
+    return [
+        'posts' => $processed_posts,
+        'total_pages' => $total_pages,
+        'current_page' => $page
+    ];
+}
+
+/**
+ * Fetch a single blog post by slug
+ */
+function fetchBlogPostBySlug($slug) {
+    // WordPress REST API endpoint
+    $api_url = '/news/wp-json/wp/v2/posts?slug=' . urlencode($slug) . '&_embed';
+
+    // Build full URL
+    $base_url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://" . $_SERVER['HTTP_HOST'];
+    $full_url = $base_url . $api_url;
+
+    // Initialize cURL
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $full_url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_TIMEOUT, 5);
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+
+    $response = curl_exec($ch);
+    $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    curl_close($ch);
+
+    // Check if request was successful
+    if ($http_code !== 200 || !$response) {
+        return false;
+    }
+
+    $posts = json_decode($response, true);
+
+    // Should return array with one post
+    if (empty($posts) || !isset($posts[0])) {
+        return false;
+    }
+
+    $post = $posts[0];
+
+    // Process the post
+    $processed_post = [
+        'id' => $post['id'],
+        'slug' => $post['slug'],
+        'title' => $post['title']['rendered'],
+        'content' => $post['content']['rendered'],
+        'excerpt' => strip_tags($post['excerpt']['rendered']),
+        'date' => date('F j, Y', strtotime($post['date'])),
+        'featured_image' => null
+    ];
+
+    // Get featured image if available (use large size for single post)
+    if (isset($post['_embedded']['wp:featuredmedia'][0])) {
+        $media = $post['_embedded']['wp:featuredmedia'][0];
+        if (isset($media['media_details']['sizes']['large'])) {
+            $processed_post['featured_image'] = $media['media_details']['sizes']['large']['source_url'];
+        } elseif (isset($media['source_url'])) {
+            $processed_post['featured_image'] = $media['source_url'];
+        }
+    }
+
+    return $processed_post;
+}
+
+// Helper function to trim words (in case WordPress function not available)
+if (!function_exists('wp_trim_words')) {
+    function wp_trim_words($text, $num_words = 55) {
+        $text = strip_tags($text);
+        $words_array = explode(' ', $text);
+        if (count($words_array) > $num_words) {
+            $words_array = array_slice($words_array, 0, $num_words);
+            $text = implode(' ', $words_array) . '...';
+        } else {
+            $text = implode(' ', $words_array);
+        }
+        return $text;
+    }
+}
+?>
