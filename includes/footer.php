@@ -4,27 +4,27 @@
                     <div class="footer-column">
                         <h4>Core Services</h4>
                         <ul>
-                            <li><a href="/hydraulic-ram-repair.php">Hydraulic Ram Repair</a></li>
-                            <li><a href="/cylinder-tube-honing.php">Cylinder Tube Honing</a></li>
-                            <li><a href="/hydraulic-hose-manufacturing.php">Hydraulic Hose Manufacturing</a></li>
+                            <li><a href="/hydraulic-ram-repair">Hydraulic Ram Repair</a></li>
+                            <li><a href="/cylinder-tube-honing">Cylinder Tube Honing</a></li>
+                            <li><a href="/hydraulic-hose-manufacturing">Hydraulic Hose Manufacturing</a></li>
                         </ul>
                     </div>
 
                     <div class="footer-column">
                         <h4>Legal</h4>
                         <ul>
-                            <li><a href="/terms-and-conditions.php">Terms & Conditions</a></li>
-                            <li><a href="/privacy-policy.php">Privacy Policy</a></li>
-                            <li><a href="/cookie-policy.php">Cookie Policy</a></li>
+                            <li><a href="/terms-and-conditions">Terms & Conditions</a></li>
+                            <li><a href="/privacy-policy">Privacy Policy</a></li>
+                            <li><a href="/cookie-policy">Cookie Policy</a></li>
                         </ul>
                     </div>
 
                     <div class="footer-column">
                         <h4>Company</h4>
                         <ul>
-                            <li><a href="/about.php">About Us</a></li>
-                            <li><a href="/news.php">News</a></li>
-                            <li><a href="/contact.php">Contact</a></li>
+                            <li><a href="/about">About Us</a></li>
+                            <li><a href="/blog/">News</a></li>
+                            <li><a href="/contact">Contact</a></li>
                         </ul>
                     </div>
 
@@ -392,7 +392,7 @@
     <!-- Cookie Consent Banner -->
     <div id="cookie-banner" class="cookie-banner" style="display: none;">
         <div class="cookie-content">
-            <p>We use cookies to improve your experience on our site. By continuing to use our website, you accept our use of cookies. <a href="/cookie-policy.php">Learn more</a></p>
+            <p>We use cookies to improve your experience on our site. By continuing to use our website, you accept our use of cookies. <a href="/cookie-policy">Learn more</a></p>
             <div class="cookie-buttons">
                 <button onclick="acceptCookies()" class="btn btn-primary">Accept</button>
                 <button onclick="declineCookies()" class="btn btn-outline">Decline</button>

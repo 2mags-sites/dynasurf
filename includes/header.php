@@ -36,9 +36,9 @@ if ($current_page == 'index') $current_page = 'home';
     <link rel="canonical" href="<?php echo SITE_URL . $_SERVER['REQUEST_URI']; ?>">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="assets/css/dyna.css">
+    <link rel="stylesheet" href="/assets/css/dyna.css">
     <?php if (basename($_SERVER['PHP_SELF']) !== 'index.php'): ?>
-    <link rel="stylesheet" href="assets/css/service-pages.css">
+    <link rel="stylesheet" href="/assets/css/service-pages.css">
     <?php endif; ?>
 
     <!-- CSRF Token for Forms -->
@@ -108,19 +108,19 @@ if ($current_page == 'index') $current_page = 'home';
                 <nav class="main-nav">
                     <ul>
                         <li><a href="/" <?php echo $current_page == 'home' ? 'class="active"' : ''; ?>>Home</a></li>
-                        <li><a href="/about.php" <?php echo $current_page == 'about' ? 'class="active"' : ''; ?>>About</a></li>
+                        <li><a href="/about" <?php echo $current_page == 'about' ? 'class="active"' : ''; ?>>About</a></li>
                         <li class="dropdown">
                             <a href="#" <?php echo in_array($current_page, ['hydraulic-ram-repair', 'cylinder-tube-honing', 'hydraulic-hose-manufacturing']) ? 'class="active"' : ''; ?>>Services <span class="dropdown-arrow">▼</span></a>
                             <div class="dropdown-menu">
-                                <a href="/hydraulic-ram-repair.php">Hydraulic Ram Repair</a>
-                                <a href="/cylinder-tube-honing.php">Cylinder Tube Honing</a>
-                                <a href="/hydraulic-hose-manufacturing.php">Hydraulic Hose Manufacturing</a>
+                                <a href="/hydraulic-ram-repair">Hydraulic Ram Repair</a>
+                                <a href="/cylinder-tube-honing">Cylinder Tube Honing</a>
+                                <a href="/hydraulic-hose-manufacturing">Hydraulic Hose Manufacturing</a>
                                 <div class="dropdown-divider"></div>
                                 <a href="/#services">All Services</a>
                             </div>
                         </li>
                         <li><a href="/blog/" <?php echo $current_page == 'blog' ? 'class="active"' : ''; ?>>News</a></li>
-                        <li><a href="/contact.php" <?php echo $current_page == 'contact' ? 'class="active"' : ''; ?>>Contact</a></li>
+                        <li><a href="/contact" <?php echo $current_page == 'contact' ? 'class="active"' : ''; ?>>Contact</a></li>
                     </ul>
                 </nav>
                 <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>

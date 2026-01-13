@@ -41,6 +41,18 @@
     # Admin files (admin-save.php, admin-upload.php) have their own PHP authentication
     # Do not block them here - they check isAdminMode() internally
 
+    # Clean URLs - Remove .php extension
+    # Redirect /page.php to /page (external redirect)
+    RewriteCond %{THE_REQUEST} \s/([^.]+)\.php[\s?] [NC]
+    RewriteCond %{REQUEST_URI} !^/(admin-save|admin-upload|contact-handler|download-content) [NC]
+    RewriteRule ^ /%1 [R=301,L]
+
+    # Internally rewrite /page to /page.php
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}.php -f
+    RewriteRule ^([^/]+)/?$ $1.php [L]
+
     # Blog URL Rewrites
     # /blog/ -> blog.php (listing page)
     RewriteRule ^blog/?$ blog.php [L,QSA]
