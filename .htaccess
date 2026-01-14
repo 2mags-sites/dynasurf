@@ -54,15 +54,10 @@
     RewriteRule ^([^/]+)/?$ $1.php [L]
 
     # Redirect old /news/[slug] URLs to /blog/[slug]
-    # Excludes WordPress system paths so /news/wp-admin, /news/wp-json etc still work
-    RewriteCond %{REQUEST_URI} ^/news/([a-z0-9\-]+)/?$ [NC]
-    RewriteCond %{REQUEST_URI} !^/news/wp- [NC]
-    RewriteCond %{REQUEST_URI} !^/news/feed [NC]
-    RewriteCond %{REQUEST_URI} !^/news/category [NC]
-    RewriteCond %{REQUEST_URI} !^/news/tag [NC]
-    RewriteCond %{REQUEST_URI} !^/news/author [NC]
-    RewriteCond %{REQUEST_URI} !^/news/page [NC]
-    RewriteRule ^news/([a-z0-9\-]+)/?$ /blog/$1 [R=301,L]
+    # Note: This is handled in WordPress .htaccess since WP intercepts /news/ requests
+
+    # Redirect old /dynasurf/[slug] URLs to /blog/[slug]
+    RewriteRule ^dynasurf/([a-z0-9\-]+)/?$ /blog/$1 [R=301,L]
 
     # Blog URL Rewrites
     # /blog/ -> blog.php (listing page)
