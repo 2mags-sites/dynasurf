@@ -59,6 +59,18 @@
     # Redirect old /dynasurf/[slug] URLs to /blog/[slug]
     RewriteRule ^dynasurf/([a-z0-9\-]+)/?$ /blog/$1 [R=301,L]
 
+    # Redirect old /services/[slug] URLs to new flat structure
+    RewriteRule ^services/hydraulic-ram-repair/?$ /hydraulic-ram-repair [R=301,L]
+    RewriteRule ^services/hydraulic-hose-manufacturing/?$ /hydraulic-hose-manufacturing [R=301,L]
+    RewriteRule ^services/hydraulic-cylinder-manufacturing/?$ /hydraulic-cylinder-manufacturing [R=301,L]
+    RewriteRule ^services/cylinder-tube-honing/?$ /cylinder-tube-honing [R=301,L]
+    RewriteRule ^services/automotive-component-reconditioning/?$ /automotive-component-reconditioning [R=301,L]
+    RewriteRule ^services/precision-surface-restoration/?$ /precision-surface-restoration [R=301,L]
+    RewriteRule ^services/emergency-express-services/?$ /emergency-express-services [R=301,L]
+
+    # Catch-all for any other /services/ URLs - redirect to homepage
+    RewriteRule ^services/?$ / [R=301,L]
+
     # Blog URL Rewrites
     # /blog/ -> blog.php (listing page)
     RewriteRule ^blog/?$ blog.php [L,QSA]
