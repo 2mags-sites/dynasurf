@@ -12,9 +12,8 @@ error_log
 /cache/
 *.cache
 
-# Uploads (user content)
-/assets/images/uploads/*
-!/assets/images/uploads/.gitkeep
+# Uploads (user content - lives on production only, never in repo)
+/assets/images/uploads/
 
 # Backup files
 *.backup

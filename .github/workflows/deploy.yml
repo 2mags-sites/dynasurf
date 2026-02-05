@@ -41,6 +41,9 @@ jobs:
       run: |
         echo "Preparing files for deployment..."
         rm -rf content/backups 2>/dev/null || true
+        # Uploads folder should not exist in repo, but double-check
+        # Production uploads must NEVER be overwritten by deployments
+        rm -rf assets/images/uploads 2>/dev/null || true
         echo "Content files to deploy:"
         ls -la content/
 
