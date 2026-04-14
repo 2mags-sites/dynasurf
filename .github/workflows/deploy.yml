@@ -16,47 +16,24 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
+
+    - name: Deploy code via rsync
+      uses: burnett01/rsync-deployments@7.0.1
       with:
-        fetch-depth: 2
-
-    - name: Check what changed
-      id: changes
-      run: |
-        if git rev-parse HEAD~1 >/dev/null 2>&1; then
-          if git diff --name-only HEAD~1 HEAD | grep -q "^content/.*\.json$"; then
-            echo "content_changed=true" >> $GITHUB_OUTPUT
-            echo "Content files were modified - will deploy everything"
-          else
-            echo "content_changed=false" >> $GITHUB_OUTPUT
-            echo "Only code changes - will preserve production content"
-          fi
-          echo "Changed files:"
-          git diff --name-only HEAD~1 HEAD
-        else
-          echo "content_changed=true" >> $GITHUB_OUTPUT
-          echo "Initial commit - deploying all files"
-        fi
-
-    - name: Prepare deployment
-      run: |
-        echo "Preparing files for deployment..."
-        rm -rf content/backups 2>/dev/null || true
-        # Uploads folder should not exist in repo, but double-check
-        # Production uploads must NEVER be overwritten by deployments
-        rm -rf assets/images/uploads 2>/dev/null || true
-        echo "Content files to deploy:"
-        ls -la content/
-
-    - name: Deploy to dynasurf.co.uk
-      uses: appleboy/scp-action@v0.1.4
-      with:
-        host: ${{ secrets.WHM_HOST }}
-        username: ${{ secrets.WHM_USERNAME }}
-        key: ${{ secrets.WHM_SSH_KEY }}
-        source: "."
-        target: "${{ env.DEPLOY_PATH }}"
-        rm: false
-        strip_components: 0
+        switches: -avz --delete
+        rsh: -o StrictHostKeyChecking=no
+        path: ./
+        remote_path: ${{ env.DEPLOY_PATH }}/
+        remote_host: ${{ secrets.WHM_HOST }}
+        remote_user: ${{ secrets.WHM_USERNAME }}
+        remote_key: ${{ secrets.WHM_SSH_KEY }}
+        exclude: |
+          .git/
+          .github/
+          content/
+          assets/images/uploads/
+          .env
+          content/backups/
 
     - name: Set permissions
       uses: appleboy/ssh-action@v0.1.5
