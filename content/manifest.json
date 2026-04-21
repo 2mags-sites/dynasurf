@@ -1,10 +1,11 @@
 {
-    "site": "dynasurf.2magpiesseo.co.uk",
-    "backup_date": "2026-01-13 14:11:33",
-    "file_count": 10,
+    "site": "dynasurf.co.uk",
+    "backup_date": "2026-04-21 10:20:10",
+    "file_count": 12,
     "files": [
         "about.json",
         "automotive-component-reconditioning.json",
+        "blog.json",
         "contact.json",
         "cylinder-tube-honing.json",
         "emergency-express-services.json",
@@ -12,6 +13,7 @@
         "hydraulic-hose-manufacturing.json",
         "hydraulic-ram-repair.json",
         "index.json",
+        "manifest.json",
         "precision-surface-restoration.json"
     ]
 }

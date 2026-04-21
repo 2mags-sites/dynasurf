@@ -1,9 +1,10 @@
 {
     "hero": {
-        "subtitle": "Hydraulic Repairs \u2022 Cylinder Honing \u2022 Hose Manufacturing"
+        "subtitle": "Hydraulic Repairs \u2022 Cylinder Honing \u2022 Hose Manufacturing",
+        "title": "Precision Engineering Excellence Since 1971"
     },
     "about": {
-        "title": "Precision Engineering Since 1970",
+        "title": "Precision Engineering Since 1971",
         "content": [
             "With over 50 years of expertise, Dynasurf UK Ltd has established itself as a leading provider of precision surface engineering and hydraulic solutions.",
             "We serve clients across the UK with specialized services in hydraulic repairs, cylinder honing, and hose manufacturing.",
@@ -11,7 +12,7 @@
             "We pride ourselves on delivering exceptional quality, fast turnaround times, and reliable service that keeps your operations running smoothly."
         ],
         "button_text": "Learn About Us",
-        "image": "/assets/images/uploads/img_693c4206d6618_1765556742.jpg"
+        "image": "/assets/images/uploads/img_69de2a8830c6f_1776167560.jpeg"
     },
     "emergency": {
         "title": "Emergency Express Services",
@@ -26,7 +27,7 @@
         ],
         "button_text": "Contact Us",
         "button_link": "/contact.php",
-        "image": "/assets/images/uploads/img_693c42cd762a9_1765556941.jpeg"
+        "image": "/assets/images/uploads/img_69de2acf3e356_1776167631.jpg"
     },
     "why_choose": {
         "title": "Why Choose Dynasurf?",
@@ -140,5 +141,10 @@
                 "name": "Power Generation"
             }
         ]
+    },
+    "meta": {
+        "title": "Hydraulic Ram Repair & Cylinder Honing Sandbach | Dynasurf UK",
+        "description": "Expert hydraulic ram repair, cylinder tube honing & hose manufacturing in Sandbach, Cheshire. Same-day express service available. Serving UK industry since 1971. Call 01270 763032.",
+        "keywords": "hydraulic ram repair Sandbach, cylinder tube honing Cheshire, hydraulic hose manufacturing UK, precision engineering Sandbach, hydraulic cylinder repair Cheshire, hose repair Crewe, hose repair Liverpool, hose repair Runcorn, industrial hydraulic repair near me"
     }
 }

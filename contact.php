@@ -168,7 +168,16 @@ require_once 'includes/header.php';
                     </div>
                 </div>
                 <div class="content-image">
-                    <?php echo editableImage($content['business_info']['map_image'] ?? '', 'business_info.map_image', 'Interactive Map Placeholder', 'Location Map'); ?>
+                    <iframe
+                        src="https://maps.google.com/maps?q=Dynasurf+UK+Ltd,+Sandbach+CW11+3XX&output=embed"
+                        width="100%"
+                        height="450"
+                        style="border:0; border-radius: 8px;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Dynasurf UK Ltd location">
+                    </iframe>
                 </div>
             </div>
 
