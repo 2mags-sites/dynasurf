@@ -1,0 +1,12 @@
+# Copy this file to deploy.config and fill in the values.
+# deploy.config is gitignored — safe place for SSH host details.
+
+# Required: cPanel SSH hostname
+REMOTE_HOST=
+
+# Optional: defaults shown
+# REMOTE_USER=dynasurfco
+# REMOTE_PATH=/home/dynasurfco/public_html/
+
+# Optional: path to SSH private key if not using default (~/.ssh/id_rsa)
+# SSH_KEY=~/.ssh/dynasurf_key

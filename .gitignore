@@ -40,3 +40,9 @@ vendor/
 # Sensitive data
 /content/*.json.backup
 /includes/config.local.php
+
+# Deploy config (contains SSH host/user — do not commit)
+deploy.config
+
+# Claude Code artifacts
+tmpclaude-*
