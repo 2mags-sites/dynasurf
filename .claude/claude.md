@@ -1,13 +1,9 @@
 # DynaSurf - Project Instructions
 
-## CRITICAL: JSON Content Management
+## JSON Content Management
 
-**Before starting any development:**
-Remind the user to download ALL JSON content from production and overwrite local content folder.
+Production (cPanel) is the source of truth for `content/*.json` and uploaded images — admins edit live via the CMS.
 
-**When committing to GitHub:**
-ALWAYS commit ALL JSON files (content/*.json), even if you only changed one file.
-This ensures GitHub has complete current state and prevents stale content from being deployed.
+The GitHub Action (`.github/workflows/deploy.yml`) rsyncs to cPanel with `content/` and `assets/images/uploads/` **excluded**, so pushes cannot overwrite live JSON or uploaded images. Pushing template/PHP changes is safe without first syncing JSON from production.
 
-**Why:** Production (cPanel) is source of truth. GitHub deploys ALL files on every push.
-Stale JSON in Git will overwrite current production content.
+**Optional:** If you want GitHub to mirror production content (useful for audit/rollback), download the latest JSON and commit it separately. Not required for safety.
